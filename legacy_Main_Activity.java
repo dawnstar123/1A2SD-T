@@ -22,6 +22,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         Log.i(TAG, "onCreate");
         button = (Button) findViewById(R.id.button);
         button.setOnClickListener(MainActivity.this);
+        Button button2 = (Button) findViewById(R.id.button2);
+        button2.setOnClickListener(MainActivity.this);
         new Button.OnClickListener()
         {
             public void onClick(View v)
@@ -33,12 +35,33 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        Log.i(TAG, "Pressed");
-        Intent myIntent = new Intent(v.getContext(), CHEM.class);
-        startActivity(myIntent);
-        EditText editText = (EditText) findViewById(R.id.editText2);
-        String value = editText.getText().toString();
-        Log.i(TAG, value);
+        if(v.getId() == R.id.button){
+            Log.i(TAG, "Pressed b1");
+            Intent myIntent = new Intent(v.getContext(), CHEM.class);
+            startActivity(myIntent);
+            EditText editText = (EditText) findViewById(R.id.editText2);
+            String value = editText.getText().toString();
+            Log.i(TAG, value);
+        }else{
+            Log.i(TAG, "Pressed b2");
+            Intent myIntent1 = new Intent(v.getContext(), E3.class);
+            startActivity(myIntent1);
+        }
+        /*
+        switch(v.getId()) {
+           case R.id.button:
+            Log.i(TAG, "Pressed");
+            Intent myIntent = new Intent(v.getContext(), CHEM.class);
+            startActivity(myIntent);
+            EditText editText = (EditText) findViewById(R.id.editText2);
+            String value = editText.getText().toString();
+            Log.i(TAG, value);
+            case R.id.button2:
+                Log.i(TAG, "Pressed");
+                Intent myIntent1 = new Intent(v.getContext(), E3.class);
+                startActivity(myIntent1);
+       }
+       */
     }
 
 

@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:hint="Duration of shower min"
+        android:hint="Duration of shower (min)"
         android:id="@+id/editText"
         android:layout_below="@+id/editText2"
         android:layout_alignParentStart="true" />
@@ -56,6 +56,50 @@
         android:id="@+id/editText3"
         android:layout_below="@+id/editText"
         android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText4"
+        android:layout_below="@+id/editText3"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:hint="# of times you wash your car (per day)" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText5"
+        android:layout_below="@+id/editText4"
+        android:layout_alignParentStart="true"
+        android:hint="#plants"
+        android:layout_alignEnd="@+id/textView2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText6"
+        android:layout_below="@+id/editText4"
+        android:hint="#of times you water plants"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/editText5" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText7"
+        android:layout_below="@+id/editText5"
+        android:layout_alignParentStart="true"
+        android:text="# of times toliet is used in the household"
         android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

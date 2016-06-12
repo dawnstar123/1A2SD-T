@@ -15,26 +15,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.i(TAG, "onCreate");
-        Button button = (Button) findViewById(R.id.button);
+        Button button = (Button) findViewById(R.id.waterButton);
         button.setOnClickListener(MainActivity.this);
-        Button button2 = (Button) findViewById(R.id.button2);
+        Button button2 = (Button) findViewById(R.id.waterButton2);
         button2.setOnClickListener(MainActivity.this);
-        Button button3 = (Button) findViewById(R.id.button3);
+        Button button3 = (Button) findViewById(R.id.pollutionButton);
         button3.setOnClickListener(MainActivity.this);
 
     }
 
     @Override
     public void onClick(View v) {
-        if(v.getId() == R.id.button) {
+        if(v.getId() == R.id.waterButton) {
             Intent myIntent = new Intent(v.getContext(), Water.class);
             startActivity(myIntent);
             Log.i(TAG, "pressed");
-        }else if(v.getId() == R.id.button2){
+        }else if(v.getId() == R.id.waterButton2){
             Intent myIntent1 = new Intent(v.getContext(), WaterGraph.class);
             startActivity(myIntent1);
             Log.i(TAG, "pressed");
-        }else if(v.getId() == R.id.button3){
+        }else if(v.getId() == R.id.pollutionButton){
             Intent myIntent2 = new Intent(v.getContext(), Pollution.class);
             startActivity(myIntent2);
             Log.i(TAG, "pressed");

@@ -1,5 +1,11 @@
 package com.woof.cuhacks_dawnstar;
 
+/**
+ * Created by nihar on 6/11/2016.
+ */
+
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -29,6 +35,11 @@ public class Pollution extends AppCompatActivity {
             public void onClick(View v) {
                 zip_str = edit_zip.getText().toString();
                 myRef.push().setValue(zip_str);
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                intent.setData(Uri.parse("https://files.airnowtech.org/airnow/today/forecast_aqi_20160612_al_ga_fl.jpg"));
+                startActivity(intent);
             }
         });
 

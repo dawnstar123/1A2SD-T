@@ -9,7 +9,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class Water extends AppCompatActivity implements View.OnClickListener {
+    static int xfs = 0;
     String TAG = "gg";
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +47,7 @@ public class Water extends AppCompatActivity implements View.OnClickListener {
         int plants = numPlants*numWatPlants *2;
 
         String xs = String.valueOf(showerfinal+drinkWat+car+plants+numToilet+misc1);
-
+        xfs = (int) (showerfinal+drinkWat+car+plants+numToilet+misc1);
 
 
         Log.i(TAG, String.valueOf(showerNum));
@@ -57,5 +61,8 @@ public class Water extends AppCompatActivity implements View.OnClickListener {
 
         TextView text=(TextView)findViewById(R.id.textView3);
         text.setText(xs + " liters of water");
+    }
+    public static int getMyInt(){
+        return xfs;
     }
 }

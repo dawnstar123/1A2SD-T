@@ -41,14 +41,11 @@ public class Pollution extends AppCompatActivity {
                     //try {
                         Log.d("Value", (String) postSnapshot.getValue());
                     //}catch(java.lang.ClassCastException e){
-
                     //}
                 }
             }
-
             @Override
             public void onCancelled(DatabaseError databaseError) {
-
             }
         });*/
     }

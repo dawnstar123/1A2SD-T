@@ -83,6 +83,22 @@ public class electricity extends MainActivity implements View.OnClickListener {
 
                 text1.setText(df.format(finalcalc) + "% more than the average american household power consumption");
                 //text1.setText(resUs + " kWh of power consumed");
+                if(finalcalc > 100 && finalcalc <300){
+                    TextView text3=(TextView)findViewById(R.id.textView9);
+                    text3.setText("Try to conserve energy by using the following sparingly : LED TV, Gaming System, 4 Light Bulbs");
+                }
+                if(finalcalc >= 300 && finalcalc <500){
+                    TextView text3=(TextView)findViewById(R.id.textView9);
+                    text3.setText("Try to conserve energy by using the following sparingly : 5-6 Light Bulbs, Clothes dryer, Room heater");
+                }
+                if(finalcalc >= 500 && finalcalc <700){
+                    TextView text3=(TextView)findViewById(R.id.textView9);
+                    text3.setText("Try to conserve energy by using the following sparingly : Desktop Computer, 5-7 Light Bulbs,3-4 Ceiling Fans");
+                }
+                if(finalcalc >= 700){
+                    TextView text3=(TextView)findViewById(R.id.textView9);
+                    text3.setText("Try to conserve energy by using the following sparingly : Central Climate Control, Water Heater, Washing Machine, 8-10 Light Bulbs");
+                }
             }
             else{
                 TextView text1 =(TextView)findViewById(R.id.textView6);

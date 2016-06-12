@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/editText_zip"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
@@ -41,8 +41,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ENTER"
-        android:id="@+id/button4"
-        android:layout_below="@+id/editText"
+        android:id="@+id/button_zip"
+        android:layout_below="@+id/editText_zip"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="49dp" />
 

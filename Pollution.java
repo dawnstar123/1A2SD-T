@@ -57,10 +57,154 @@ public class Pollution extends AppCompatActivity {
                 zip_str = edit_zip.getText().toString();
                 myRef.push().setValue(zip_str);
                 Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("https://files.airnowtech.org/airnow/today/forecast_aqi_20160612_al_ga_fl.jpg"));
-                startActivity(intent);
+                switch (zip_str){
+                    case "Georgia":
+                    case "Florida":
+                    case "Alabama":
+                        intent.setAction(Intent.ACTION_VIEW);
+                        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                        intent.setData(Uri.parse(stateURLS[0]));
+                        startActivity(intent);
+                        break;
+                    case "Alaska":
+                        intent.setAction(Intent.ACTION_VIEW);
+                        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                        intent.setData(Uri.parse(stateURLS[1]));
+                        startActivity(intent);
+                        break;
+                    case "New Mexico":
+                    case "Arizona":
+                    case "Utah":
+                    case "Colorado":
+                        intent.setAction(Intent.ACTION_VIEW);
+                        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                        intent.setData(Uri.parse(stateURLS[2]));
+                        startActivity(intent);
+                        break;
+                    case "Louisiana":
+                    case "Mississippi":
+                    case "Arkansas":
+                        intent.setAction(Intent.ACTION_VIEW);
+                        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                        intent.setData(Uri.parse(stateURLS[3]));
+                        startActivity(intent);
+                        break;
+                    case "California":
+                    case "Nevada":
+                        intent.setAction(Intent.ACTION_VIEW);
+                        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                        intent.setData(Uri.parse(stateURLS[4]));
+                        startActivity(intent);
+                        break;
+                    case "Vermont":
+                    case "New Hampshire":
+                    case "Massachusetts":
+                    case "Connecticut":
+                    case "Rhode Island":
+                    case "Maine":
+                        intent.setAction(Intent.ACTION_VIEW);
+                        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                        intent.setData(Uri.parse(stateURLS[5]));
+                        startActivity(intent);
+                        break;
+                    case "Virginia":
+                    case "West Virginia":
+                    case "Delaware":
+                    case "District of Columbia":
+                        intent.setAction(Intent.ACTION_VIEW);
+                        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                        intent.setData(Uri.parse(stateURLS[6]));
+                        startActivity(intent);
+                        break;
+                    case "Hawaii":
+                        intent.setAction(Intent.ACTION_VIEW);
+                        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                        intent.setData(Uri.parse(stateURLS[7]));
+                        startActivity(intent);
+                        break;
+                    case "Idaho":
+                    case "Wyoming":
+                    case "Montana":
+                        intent.setAction(Intent.ACTION_VIEW);
+                        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                        intent.setData(Uri.parse(stateURLS[8]));
+                        startActivity(intent);
+                        break;
+                    case "Illinois":
+                    case "Missouri":
+                    case "Iowa":
+                        intent.setAction(Intent.ACTION_VIEW);
+                        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                        intent.setData(Uri.parse(stateURLS[9]));
+                        startActivity(intent);
+                        break;
+                    case "Michigan":
+                    case "Indiana":
+                    case "Ohio":
+                        intent.setAction(Intent.ACTION_VIEW);
+                        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                        intent.setData(Uri.parse(stateURLS[10]));
+                        startActivity(intent);
+                        break;
+                    case "Nebraska":
+                    case "Kansas":
+                        intent.setAction(Intent.ACTION_VIEW);
+                        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                        intent.setData(Uri.parse(stateURLS[11]));
+                        startActivity(intent);
+                        break;
+                    case "Kentucky":
+                    case "Tennessee":
+                        intent.setAction(Intent.ACTION_VIEW);
+                        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                        intent.setData(Uri.parse(stateURLS[12]));
+                        startActivity(intent);
+                        break;
+                    case "Maryland":
+                        intent.setAction(Intent.ACTION_VIEW);
+                        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                        intent.setData(Uri.parse(stateURLS[13]));
+                        startActivity(intent);
+                        break;
+                    case "Wisconsin":
+                    case "Minnesota":
+                        intent.setAction(Intent.ACTION_VIEW);
+                        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                        intent.setData(Uri.parse(stateURLS[14]));
+                        startActivity(intent);
+                        break;
+                    case "Pennsylvania":
+                    case "New Jersey":
+                    case "New York":
+                        intent.setAction(Intent.ACTION_VIEW);
+                        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                        intent.setData(Uri.parse(stateURLS[15]));
+                        startActivity(intent);
+                        break;
+                    case "North Carolina":
+                    case "South Carolina":
+                        intent.setAction(Intent.ACTION_VIEW);
+                        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                        intent.setData(Uri.parse(stateURLS[16]));
+                        startActivity(intent);
+                        break;
+                    case "Oklahoma":
+                    case "Texas":
+                        intent.setAction(Intent.ACTION_VIEW);
+                        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                        intent.setData(Uri.parse(stateURLS[17]));
+                        startActivity(intent);
+                        break;
+                    case "Oregon":
+                    case "Washington":
+                        intent.setAction(Intent.ACTION_VIEW);
+                        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                        intent.setData(Uri.parse(stateURLS[18]));
+                        startActivity(intent);
+                        break;
+                    default:
+                        break;
+                }
             }
         });
 

@@ -15,28 +15,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.i(TAG, "onCreate");
-        Button button = (Button) findViewById(R.id.waterButton);
+        Button button = (Button) findViewById(R.id.button);
         button.setOnClickListener(MainActivity.this);
-        Button button2 = (Button) findViewById(R.id.waterButton2);
+        Button button2 = (Button) findViewById(R.id.button2);
         button2.setOnClickListener(MainActivity.this);
-        Button button3 = (Button) findViewById(R.id.pollutionButton);
+        Button button3 = (Button) findViewById(R.id.button3);
         button3.setOnClickListener(MainActivity.this);
+        Button button5 = (Button) findViewById(R.id.button5);
+        button5.setOnClickListener(MainActivity.this);
 
     }
 
     @Override
     public void onClick(View v) {
-        if(v.getId() == R.id.waterButton) {
+        if(v.getId() == R.id.button) {
             Intent myIntent = new Intent(v.getContext(), Water.class);
             startActivity(myIntent);
             Log.i(TAG, "pressed");
-        }else if(v.getId() == R.id.waterButton2){
+        }else if(v.getId() == R.id.button2){
             Intent myIntent1 = new Intent(v.getContext(), WaterGraph.class);
             startActivity(myIntent1);
             Log.i(TAG, "pressed");
-        }else if(v.getId() == R.id.pollutionButton){
+        }else if(v.getId() == R.id.button3){
             Intent myIntent2 = new Intent(v.getContext(), Pollution.class);
             startActivity(myIntent2);
+            Log.i(TAG, "pressed");
+        }else if (v.getId() == R.id.button5){
+            Intent myIntent3 = new Intent(v.getContext(), electricity.class);
+            startActivity(myIntent3);
             Log.i(TAG, "pressed");
         }
     }

@@ -1,3 +1,4 @@
+package com.woof.cuhacks_dawnstar;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -16,11 +17,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Log.i(TAG, "onCreate");
         Button button = (Button) findViewById(R.id.button);
         button.setOnClickListener(MainActivity.this);
+        Button button2 = (Button) findViewById(R.id.button2);
+        button2.setOnClickListener(MainActivity.this);
+        Button button3 = (Button) findViewById(R.id.button3);
+        button3.setOnClickListener(MainActivity.this);
+
     }
 
     @Override
     public void onClick(View v) {
-        Intent myIntent = new Intent(v.getContext(), Water.class);
-        startActivity(myIntent);
+        if(v.getId() == R.id.button) {
+            Intent myIntent = new Intent(v.getContext(), Water.class);
+            startActivity(myIntent);
+            Log.i(TAG, "pressed");
+        }else if(v.getId() == R.id.button2){
+            Intent myIntent1 = new Intent(v.getContext(), WaterGraph.class);
+            startActivity(myIntent1);
+            Log.i(TAG, "pressed");
+        }else if(v.getId() == R.id.button3){
+            Intent myIntent2 = new Intent(v.getContext(), Pollution.class);
+            startActivity(myIntent2);
+            Log.i(TAG, "pressed");
+        }
     }
 }
